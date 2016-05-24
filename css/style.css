@@ -1,0 +1,55 @@
+
+body {
+    background: #ffffff;
+    color: #404040;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 10px;
+    letter-spacing: .9px;
+}
+
+/* --------------------common style -------------------------- */
+
+.justify {
+	text-align: justify;
+}
+
+.space{
+	height: 30px;
+}
+
+.content-padding  {
+	padding: 20px;
+}
+
+
+/* --------------------- Header style ------------------------ */
+
+
+.name-style{
+	padding:2% 0;
+}
+.name-style a{
+	font-weight: bolder;
+	font-size: 22px;	
+	word-spacing: 1px;
+	letter-spacing: .9px;
+	text-decoration: none;
+	color: #404040;
+}
+
+
+.menu-style a, 
+.menu-style a:hover{
+	text-decoration: none;
+	font-size :18px;
+	color: #666666;
+}
+
+
+
+
+
+/* --------------------- Contact style ------------------------ */
+
