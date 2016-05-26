@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
+<?php include_once "header.php" ;?>
 
-	<section>
-		<h2>Upload Projects</h2>
+	<div class="page-contents content-padding">
 		
-
-
-	</section>
-
-	
-</body>
-</html>
+		
+	</div>
+ <?php include_once "footer.php" ; ?>

@@ -15,6 +15,9 @@ body {
 	text-align: justify;
 }
 
+.center{
+	text-align: center;
+}
 .space{
 	height: 30px;
 }
@@ -23,7 +26,31 @@ body {
 	padding: 20px;
 }
 
+.no-list-style{
+	list-style: none;
+	padding: 5px;
+}
 
+a {
+	text-decoration: none;
+	font-size :14px;
+	color: #666666;
+}
+
+ a:hover,a:focus {
+
+ 	text-decoration: none;
+	color: #000;
+}
+
+.form-border {
+	padding: 10px;
+}
+
+.sign-link{
+	font-weight: bolder;
+	font-size: 20px;
+}
 /* --------------------- Header style ------------------------ */
 
 
@@ -40,16 +67,35 @@ body {
 }
 
 
-.menu-style a, 
-.menu-style a:hover{
+.menu-style a{
 	text-decoration: none;
 	font-size :18px;
 	color: #666666;
 }
 
+.menu-style a:hover,
+.menu-style a:focus {
+	color: #000;
+	font-size: 20px;
+}
+
+
+.active a {
+
+	color: #000;
+	font-size: 20px;
+}
 
 
 
 
-/* --------------------- Contact style ------------------------ */
+/* --------------------- Project style ------------------------ */
+
+.project-img {
+	width: 100%;
+}
+
+.project-img img {
+	width: 80%;
+}
 

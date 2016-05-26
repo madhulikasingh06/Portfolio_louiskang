@@ -9,10 +9,7 @@
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
-
-	<!-- Slider -->
-	<link href="css/owl.carousel.css" rel="stylesheet" media="screen">
-
+	
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -24,14 +21,27 @@
 			<div class="col-sm-12"><a href="index.php">Louis Kang</a></div>
 		</div>
 		
-		<div>
-			<ul class="list-inline menu-style">
-				   	<li><a href="profile.php">Profile</a></li>
-				    <li><a href="projects.php">Projects</a></li>
-				    <li><a href="awards.php">Awards</a></li>
-				    <li><a href="contact.php">Contact</a></li>
-		  	</ul>
-		</div>
+		<nav class="navbar">
+			<div class="">
+				
+			<div id="nav-menu">
+				<ul class="list-inline menu-style">
+					   	<li class="<?php if(basename($_SERVER['SCRIPT_NAME']) == 'profile.php'){echo 'active'; }else { echo ''; }; ?>">
+					   		<a  href="profile.php">Profile</a>
+					   	</li>
+					    <li  class="<?php if(basename($_SERVER['SCRIPT_NAME']) == 'projects.php'){echo 'active'; }else { echo ''; }; ?>">
+					    	<a href="projects.php" >Projects</a>
+					    </li>
+					    <li  class="<?php if(basename($_SERVER['SCRIPT_NAME']) == 'awards.php'){echo 'active'; }else { echo ''; }; ?>">
+					    	<a href="awards.php" >Awards</a>
+					    </li>
+					    <li  class="<?php if(basename($_SERVER['SCRIPT_NAME']) == 'contact.php'){echo 'active'; }else { echo ''; }; ?>">
+					    	<a href="contact.php" >Contact</a>
+					    </li>
+			  	</ul>
+			  </div>
+			</div>
+		</nav>
 			  
 	</div>
 
