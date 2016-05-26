@@ -1,12 +1,15 @@
 
 body {
-    background: #ffffff;
+    background: #ededed;
     color: #404040;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.5;
     padding: 10px;
     letter-spacing: .9px;
+
+
+
 }
 
 /* --------------------common style -------------------------- */
@@ -51,6 +54,8 @@ a {
 	font-weight: bolder;
 	font-size: 20px;
 }
+
+hr { background-color: #404040; height: 1px; border: 0; }
 /* --------------------- Header style ------------------------ */
 
 
@@ -60,8 +65,7 @@ a {
 .name-style a{
 	font-weight: bolder;
 	font-size: 22px;	
-	word-spacing: 1px;
-	letter-spacing: .9px;
+	letter-spacing: 0.09em;
 	text-decoration: none;
 	color: #404040;
 }
@@ -71,31 +75,44 @@ a {
 	text-decoration: none;
 	font-size :18px;
 	color: #666666;
+	letter-spacing: 0.1em;
 }
 
 .menu-style a:hover,
 .menu-style a:focus {
 	color: #000;
-	font-size: 20px;
+	font-size: 19px;
+	letter-spacing:0.1em;
 }
 
 
 .active a {
 
 	color: #000;
-	font-size: 20px;
+	font-size: 19px;
+	letter-spacing:0.1em;
 }
 
 
+.float-right{
+	float: right;
+}
 
+a .text-color-white{
+	color: #FFF;
+}
 
 /* --------------------- Project style ------------------------ */
 
 .project-img {
 	width: 100%;
+	text-align: center;
+	padding: 50px auto 50px auto; 
+	
 }
 
 .project-img img {
-	width: 80%;
+	max-width: 100%;
+	height: auto;
 }
 

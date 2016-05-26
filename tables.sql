@@ -14,6 +14,7 @@ CREATE TABLE projects_desc (
 	project_description VARCHAR(1000),
 	project_img VARCHAR(200),
 	active boolean,
+	updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 	PRIMARY KEY ( ID )
 );
 
@@ -22,10 +23,22 @@ CREATE TABLE projects_images (
 	ID INT AUTO_INCREMENT,
 	project_id INT,
 	image_src VARCHAR(100),
+	updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 	PRIMARY KEY ( ID ),
 	FOREIGN KEY (project_id) REFERENCES projects_desc(ID)
 
 );
+
+
+CREATE TABLE awards (
+		ID INT AUTO_INCREMENT,
+		year INT ,
+		aw_title VARCHAR(100),
+		aw_desc VARCHAR(500),
+		updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+		PRIMARY KEY ( ID )
+
+)
 
 -- Inserts
 
@@ -42,3 +55,9 @@ INSERT INTO projects_images(project_id, image_src) VALUES
 	(1,'img.jpg'),
 	(1,'img.jpg'),
 	(1,'img.jpg');
+
+-- ALTERS 
+
+ALTER TABLE projects_desc ADD updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
+ALTER TABLE projects_images ADD updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
+

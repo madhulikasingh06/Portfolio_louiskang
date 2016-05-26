@@ -113,6 +113,8 @@
 
 	<div class="page-contents content-padding">
 	
+ 
+
 		<div class="row">
 			<div class="col-sm-10">
 				<div id="add-proj-div" class="form-border">
@@ -121,17 +123,17 @@
 						<input type="hidden" name="id" value="<?php echo $id; ?>">
 						 <div class="form-group">
 						    <label for="title">Project title:</label>
-						    <input type="text" class="form-control" id="title" name="title" value="<?php echo $project_title; ?>">
+						    <input type="text" required class="form-control" id="title" name="title" value="<?php echo $project_title; ?>">
 						  </div>
 						  
 						  <div class="form-group">
 							    <label for="desc">Project Description:</label>
-							    <textarea class="form-control" name="desc" id="desc" rows="10" maxlength="1000"><?php echo $project_desc ;?></textarea> 
+							    <textarea class="form-control" required  name="desc" id="desc" rows="10" maxlength="1000"><?php echo $project_desc ;?></textarea> 
 						  </div>
 						  
 						  <div class="form-group">
 							    <label for="proj">Project Image:</label>
-								<input type="file" class="" name="projFiles[]" id="projFiles" multiple >
+								<input type="file" class="" required name="projFiles[]" id="projFiles" multiple >
 									<br />
 									<div id="selectedFiles"></div>
 								</input>
@@ -229,4 +231,4 @@
         }
         
     }
-    </script>add-edit-projects.php
+    </script>

@@ -2,13 +2,14 @@
 
 	<div class="page-contents content-padding">
 	
-<!-- 		<div class="row">
+		<div class="row">
 			<div class="col-sm-10">
-				<button class="btn btn-info">Add A Project</button>	
+				<a class="btn btn-primary" href="add-edit-projects.php">Add A Project</a>	
 				<div class="space"></div>
 
 			</div>
-		</div> -->
+		</div>
+
 		<div class="space"></div>
 		<div class="row">
 			<div class="col-sm-8">

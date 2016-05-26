@@ -1,74 +1,103 @@
 <?php include_once "includes/header.php" ;?>
-
-	<div class="page-contents content-padding">
-
-		<div id="project-container">
-			<div class="row">
-				<div class="col-sm-3">
-					<div id="project-titles">
+<?php 
+$id_projects= array(); 
+?>
+<div class="page-contents content-padding">
+	<div id="project-container">
+		<div class="row">
+			<div class="col-sm-3">
+				<div id="project-titles">
 					<h3>Projects</h3>
-						<ul class="no-list-style">
-							<li><a href="#proj1">Project1</a></li>
-							<li><a href="#proj2">Project2</a></li>
-							<li><a href="#proj3">Project3</a></li>
-							<li><a href="#proj4">Project4</a></li>
-						</ul>
+					<ul class="no-list-style">
+
+						<?php 
+						$sql="SELECT  * FROM  projects_desc WHERE active=1 ORDER BY ID;";
+
+						$result= $db->query($sql);
+
+				            // echo "total rows : ".$result->num_rows;
+						if($result->num_rows > 0){
+
+							while($row = $result->fetch_assoc()) {
+
+								$arrayName = array('id' => $row['ID'],'title' => $row['project_title'],
+									'desc' => $row['project_description']);
+
+								array_push($id_projects, $arrayName);
+								?>
 
 
+								<li><a href="#proj-<?php echo trim($row['ID']); ?>"><?php echo $row['project_title'];?></a></li>
+								<?php }
+									// print_r($id_projects);
 
-
+								}
+							?>
 					</div>
-
 				</div>
 				<div class="col-sm-9">
-						<div id="project-details">
-							
-							<div id="proj1">
-								<div class="project-img"><img src="images/Works/img.jpg" alt=""></div>
-								<div class="project-title">Project1</div>
-								<div class="project-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestias dolor sit reprehenderit, tempora itaque impedit inventore voluptatem totam aspernatur sunt provident cumque, modi consequuntur enim saepe laudantium suscipit reiciendis.</div>
+					<div id="project-details">
 
-								<div class="project-img"><img src="images/Works/img.jpg" alt=""></div>
-								<div class="project-title">Project1</div>
-								<div class="project-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestias dolor sit reprehenderit, tempora itaque impedit inventore voluptatem totam aspernatur sunt provident cumque, modi consequuntur enim saepe laudantium suscipit reiciendis.</div>
+						<!-- code for showing images  -->
+						<?php 
 
-								<div class="project-img"><img src="images/Works/img.jpg" alt=""></div>
-								<div class="project-title">Project1</div>
-								<div class="project-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestias dolor sit reprehenderit, tempora itaque impedit inventore voluptatem totam aspernatur sunt provident cumque, modi consequuntur enim saepe laudantium suscipit reiciendis.</div>
+						foreach ($id_projects as $index => $project) { 
+							# code...
+							$temp_id= trim($project['id']); 
+							$temp_title = $project['title'];
+							$temp_desc = $project['desc'];
 
+							?>
 
+							<div id="proj-<?php echo $temp_id ; ?>">
+
+								<h4><?php echo $temp_title ; ?></h4>
+								
+								<?php 
+
+								$sql="SELECT  * FROM  projects_images WHERE project_id = $temp_id;";
+
+								$result= $db->query($sql);
+
+									// echo "total rows : ".$result->num_rows;
+								if($result->num_rows > 0){
+
+									while($row = $result->fetch_assoc()) { 
+										if ( $row['image_src'] != "") {  ?>
+
+										<div class="project-img">
+
+											<img class="lazy" 
+											data-original="<?php echo PROJECT_IMG_LOCATION_N.$row['image_src'] ?>" alt="">
+										</div>
+										<div class="space"></div>
+
+										<?php 	 	}
+									}
+
+								}
+
+								?>
+								<div class="project-title"><?php echo $temp_title ; ?></div>
+								<div class="project-description"><?php echo $temp_desc ; ?></div>
 							</div>
-							<hr>
-
-							<div id="proj2">
-								<div class="project-img"><img src="images/Works/img.jpg" alt=""></div>
-								<div class="project-title">Project -2</div>
-								<div class="project-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestias dolor sit reprehenderit, tempora itaque impedit inventore voluptatem totam aspernatur sunt provident cumque, modi consequuntur enim saepe laudantium suscipit reiciendis.</div>
-
-								<div class="project-img"><img src="images/Works/img.jpg" alt=""></div>
-								<div class="project-title">Project-2 </div>
-								<div class="project-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestias dolor sit reprehenderit, tempora itaque impedit inventore voluptatem totam aspernatur sunt provident cumque, modi consequuntur enim saepe laudantium suscipit reiciendis.</div>
-
-								<div class="project-img"><img src="images/Works/img.jpg" alt=""></div>
-								<div class="project-title">Project- 2</div>
-								<div class="project-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestias dolor sit reprehenderit, tempora itaque impedit inventore voluptatem totam aspernatur sunt provident cumque, modi consequuntur enim saepe laudantium suscipit reiciendis.</div>
+							<hr COLOR="#000">
 
 
-							</div>
-							<hr>
-						
+							<?php 	}
+
+							?>
+
+
+						</div>
 
 
 
 					</div>
-
-
-
 				</div>
 			</div>
-		</div>
-		
-		
-	</div>
 
- <?php include_once "includes/footer.php" ; ?>
+
+		</div>
+
+		<?php include_once "includes/footer.php" ; ?>

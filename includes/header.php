@@ -1,3 +1,5 @@
+<?php include_once "connections/connection.php";
+include_once "admin/admin-constants.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +11,7 @@
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
-	
+
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -30,7 +32,7 @@
 					   		<a  href="profile.php">Profile</a>
 					   	</li>
 					    <li  class="<?php if(basename($_SERVER['SCRIPT_NAME']) == 'projects.php'){echo 'active'; }else { echo ''; }; ?>">
-					    	<a href="projects.php" >Projects</a>
+					    	<a href="index.php" >Projects</a>
 					    </li>
 					    <li  class="<?php if(basename($_SERVER['SCRIPT_NAME']) == 'awards.php'){echo 'active'; }else { echo ''; }; ?>">
 					    	<a href="awards.php" >Awards</a>
