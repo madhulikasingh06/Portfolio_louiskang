@@ -14,13 +14,17 @@ include_once "admin/admin-constants.php"; ?>
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Fonts -->
+	<link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Arvo">
 </head>
 <body>
 	
 	<div class="container">
 		
 		<div id="name" class="name-style row">
-			<div class="col-sm-12"><a href="index.php">Louis Kang</a></div>
+			<div class="col-sm-12"><a href="index.php"> <b>LOUIS KANG</b> </a></div>
 		</div>
 		
 		<nav class="navbar">
@@ -31,7 +35,7 @@ include_once "admin/admin-constants.php"; ?>
 					   	<li class="<?php if(basename($_SERVER['SCRIPT_NAME']) == 'profile.php'){echo 'active'; }else { echo ''; }; ?>">
 					   		<a  href="profile.php">Profile</a>
 					   	</li>
-					    <li  class="<?php if(basename($_SERVER['SCRIPT_NAME']) == 'projects.php'){echo 'active'; }else { echo ''; }; ?>">
+					    <li  class="<?php if(basename($_SERVER['SCRIPT_NAME']) == 'index.php'){echo 'active'; }else { echo ''; }; ?>">
 					    	<a href="index.php" >Projects</a>
 					    </li>
 					    <li  class="<?php if(basename($_SERVER['SCRIPT_NAME']) == 'awards.php'){echo 'active'; }else { echo ''; }; ?>">

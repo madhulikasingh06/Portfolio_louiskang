@@ -46,12 +46,13 @@ INSERT INTO `admin`(`username`, `password`) VALUES ('louis','louis123');
 INSERT INTO `admin`(`username`, `password`) VALUES ('1','1');
 
 INSERT INTO projects_desc(project_title,project_description,project_img,active) VALUES
-	('test peoject' , 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae expedita, ipsa unde','img.jpg',1);
+	('Test Project' , 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae expedita, ipsa unde','img.jpg',1),
+	('Test Project 2' , 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae expedita, ipsa unde','img.jpg',1);
 
 
 INSERT INTO projects_images(project_id, image_src) VALUES
-	(1,'img.jpg'),
-	(1,'img.jpg'),
+	(2,'CoupleDancing.jpg'),
+	(2,'img.jpg'),
 	(1,'img.jpg'),
 	(1,'img.jpg'),
 	(1,'img.jpg');

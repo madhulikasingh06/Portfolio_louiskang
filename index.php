@@ -1,13 +1,14 @@
 <?php include_once "includes/header.php" ;?>
 <?php 
 $id_projects= array(); 
+$images= array();
 ?>
 <div class="page-contents content-padding">
 	<div id="project-container">
 		<div class="row">
 			<div class="col-sm-3">
 				<div id="project-titles">
-					<h3>Projects</h3>
+					<h5>PROJECTS</h5>
 					<ul class="no-list-style">
 
 						<?php 
@@ -63,19 +64,63 @@ $id_projects= array();
 								if($result->num_rows > 0){
 
 									while($row = $result->fetch_assoc()) { 
-										if ( $row['image_src'] != "") {  ?>
+										if ( $row['image_src'] != "") {
 
-										<div class="project-img">
+										$images[$temp_id][$row['ID']] = $row['image_src'];	
 
-											<img class="lazy" 
-											data-original="<?php echo PROJECT_IMG_LOCATION_N.$row['image_src'] ?>" alt="">
-										</div>
-										<div class="space"></div>
+										  ?>
 
 										<?php 	 	}
+									} 
+
+									
+
+								}?>
+
+
+								<ul class="no-list-style">
+
+								<?php 
+										$projImages = $images[$temp_id];
+
+									// print_r($projImages);
+								foreach ($projImages as $index => $url) {
+										# code...
+
+										 ?>
+
+										
+										
+										<li class="thumbs" style="display: inline-flex;">
+
+										<a href="#proj-img-<?php echo $temp_id.'-'.$index; ?>">	<img class="img-thumbnail img-responsive" 
+											src="<?php echo PROJECT_IMG_LOCATION_N.$url ; ?>" alt="" >
+										</a>
+										</li>
+
+									<?php  
+									} ?>
+
+							</ul>
+
+							<?php 	$projImages = $images[$temp_id];
+
+							foreach ($projImages as $index => $url) {
+										# code... ?>
+
+
+
+										<div class="project-img " id="proj-img-<?php echo  $temp_id.'-'.$index; ?>">
+
+											<img class="lazy project-img-padding" 
+											data-original="<?php echo PROJECT_IMG_LOCATION_N.$url;  ?>" alt="">
+										</div>
+				
+
+									<?php  
 									}
 
-								}
+				
 
 								?>
 								<div class="project-title"><?php echo $temp_title ; ?></div>

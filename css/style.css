@@ -1,17 +1,21 @@
 
 body {
-    background: #ededed;
-    color: #404040;
+    background: #FFF;
+    color: #000;
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 14px;
+   /* font-family: 'Arvo', sans-serif;*/
+    font-size: 12px;
     line-height: 1.5;
-    padding: 10px;
     letter-spacing: .9px;
-
-
+    margin:0;
+	padding: 15px 30px 15px 30px;
 
 }
 
+.container{
+	margin: 0;
+
+}
 /* --------------------common style -------------------------- */
 
 .justify {
@@ -26,22 +30,24 @@ body {
 }
 
 .content-padding  {
-	padding: 20px;
-}
+/*	padding: 20px;
+*/}
 
 .no-list-style{
 	list-style: none;
-	padding: 5px;
+	padding: 0;
 }
 
 a {
 	text-decoration: none;
-	font-size :14px;
-	color: #666666;
+	font-size :13px;
+	color: #000;
+	letter-spacing:0.1em;
+
 }
 
  a:hover,a:focus {
-
+	font-size :13px;
  	text-decoration: none;
 	color: #000;
 }
@@ -56,42 +62,49 @@ a {
 }
 
 hr { background-color: #404040; height: 1px; border: 0; }
+
+
+.project-img-padding {
+	padding: 20px 10px;
+}
 /* --------------------- Header style ------------------------ */
 
 
 .name-style{
-	padding:2% 0;
+	padding: 15px 0px;
 }
 .name-style a{
 	font-weight: bolder;
-	font-size: 22px;	
+	font-size: 20px;	
 	letter-spacing: 0.09em;
 	text-decoration: none;
-	color: #404040;
+	/*color: #404040;*/
+	word-spacing: 2px;
+	text-transform: uppercase;
 }
 
 
 .menu-style a{
 	text-decoration: none;
-	font-size :18px;
-	color: #666666;
-	letter-spacing: 0.1em;
+	/*font-size :13px;*/
+	/*color: #666666;*/
+	/*letter-spacing: 0.2em;*/
+	padding-right: 2px;
+	text-transform: uppercase;
 }
+
 
 .menu-style a:hover,
 .menu-style a:focus {
 	color: #000;
-	font-size: 19px;
-	letter-spacing:0.1em;
-}
+/*	letter-spacing:0.1em;
+*/}
 
 
 .active a {
-
 	color: #000;
-	font-size: 19px;
-	letter-spacing:0.1em;
-}
+/*	letter-spacing:0.1em;
+*/}
 
 
 .float-right{
@@ -114,5 +127,48 @@ a .text-color-white{
 .project-img img {
 	max-width: 100%;
 	height: auto;
+}
+
+
+.profile-pic{
+	text-align: center;
+}
+
+.thumbs {
+	width: 100px;
+	height: 80px;
+	padding: 5px;
+}
+
+.thumbs img{
+	width: 100%;
+	height: 90%;
+}
+/*
+
+@media screen and (min-width :1300px){
+
+	body {
+	 margin: 40px
+	}
+
+	.container{
+		margin-left: 10px
+	}
+
+}*/
+
+
+@media screen and (max-width :768px){
+	
+	.thumbs {
+	width: 70px;
+	padding: 5px;
+	}
+
+/*	body {
+	 margin-left: 10px;
+	}
+*/
 }
 
