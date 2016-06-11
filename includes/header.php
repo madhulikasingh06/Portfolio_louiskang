@@ -12,6 +12,8 @@ include_once "admin/admin-constants.php"; ?>
 	<!-- Bootstrap -->
 	<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
 
+	<link rel="stylesheet" href="css/flickity.css">
+
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/style.css">
 
@@ -21,10 +23,11 @@ include_once "admin/admin-constants.php"; ?>
 </head>
 <body>
 	
-	<div class="container">
+	<div class="container" role="navigation" style="height: 145px;">
 		
 		<div id="name" class="name-style row">
-			<div class="col-sm-12"><a href="index.php"> <b>LOUIS KANG</b> </a></div>
+			<div class="col-sm-12 logo"><a href="index.php"> <img src="images/logo.png" alt=""> </a></div>
+
 		</div>
 		
 		<nav class="navbar">

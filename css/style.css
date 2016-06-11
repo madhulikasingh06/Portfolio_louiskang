@@ -4,18 +4,38 @@ body {
     color: #000;
     font-family: Helvetica, Arial, sans-serif;
    /* font-family: 'Arvo', sans-serif;*/
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.5;
     letter-spacing: .9px;
-    margin:0;
-	padding: 15px 30px 15px 30px;
+    margin:0 ;
+	padding: 15px;
 
 }
 
 .container{
 	margin: 0;
 
+
 }
+
+
+#project-titles {
+    position: fixed;
+    margin-bottom: 10px;
+    height: 100%;
+    top: 160px;
+}
+
+#page, 
+.navbar{
+	margin-left: 5px
+}
+
+/*
+
+	20
+
+*/
 /* --------------------common style -------------------------- */
 
 .justify {
@@ -71,7 +91,7 @@ hr { background-color: #404040; height: 1px; border: 0; }
 
 
 .name-style{
-	padding: 15px 0px;
+	padding: 11px 4px;
 }
 .name-style a{
 	font-weight: bolder;
@@ -117,14 +137,36 @@ a .text-color-white{
 
 /* --------------------- Project style ------------------------ */
 
+.carousel,
+.carousel-cell ,
 .project-img {
 	width: 100%;
 	text-align: center;
 	padding: 50px auto 50px auto; 
+	min-height: 530px;
+	height:  300px;
 	
 }
 
-.project-img img {
+.carousel-cell {
+  width: 100%;
+  height: auto; /* inherit height from carousel */
+  margin-right: 10px;
+  background: #FFF;
+  counter-increment: gallery-cell;
+}
+
+
+.flickity-page-dots{
+	bottom: 5px;
+}
+/*
+.flickity-page-dots  .dot{
+	background : #FFF;
+}
+*/
+
+.carousel-cell-image {
 	max-width: 100%;
 	height: auto;
 }
@@ -158,6 +200,15 @@ a .text-color-white{
 
 }*/
 
+.project-img  img {
+	width: auto;
+	max-width: 100%;
+	
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
+	cursor:e-resize;
+}
 
 @media screen and (max-width :768px){
 	
@@ -170,5 +221,9 @@ a .text-color-white{
 	 margin-left: 10px;
 	}
 */
+}
+
+.logo img{
+	height: 22px;
 }
 
